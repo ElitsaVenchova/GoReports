@@ -37,31 +37,31 @@ Type of reports generated from GoReports:
 В него се съдържат връзките между името на спраквата, типа на резултата от спраквата, описание на справката, xsl трансформацията и sql заявките на спраквата и имената на параметрите подавани на справката.
 
 #### Пример:
-
-><?xml version='1.0' encoding='windows-1251'?>
-> <root>
->  <section description="Excel Reports">
->	  <type code="EMPLOYEE.SALARY.SIMPLE">
->		  <description>Deployee salary</description>
->		    <xslt output="fop">hr/employees_salary_simple.xsl</xslt>
->        <statements>
->			     <item rowset="list">hr/employees_salary_simple</item>
->        </statements>
-> 	     <params>
->          <param code="P_DATE_FROM"/>
->          <param code="P_DEPARTMENT"/>
->        </params>
->   </type>
->    <type code="...">
->      ......
->    </type>
-> </section>
-> <section description="...">
-> ....
-> </section>
->  ....
-> </root>
-
+```
+<?xml version='1.0' encoding='windows-1251'?>
+ <root>
+  <section description="Excel Reports">
+	  <type code="EMPLOYEE.SALARY.SIMPLE">
+		  <description>Deployee salary</description>
+		    <xslt output="fop">hr/employees_salary_simple.xsl</xslt>
+        <statements>
+			     <item rowset="list">hr/employees_salary_simple</item>
+        </statements>
+ 	     <params>
+          <param code="P_DATE_FROM"/>
+          <param code="P_DEPARTMENT"/>
+        </params>
+   </type>
+    <type code="...">
+      ......
+    </type>
+ </section>
+ <section description="...">
+ ....
+ </section>
+  ....
+ </root>
+```
 ##### section
 
 логическо разделяне на отделните типове справки(един document.xml може да има много такива)
@@ -100,16 +100,18 @@ Type of reports generated from GoReports:
 В този файл се съдържат connection стринговите на отделните бази с паролите и имената, чрез които съответно при правене на една справка ще е извличат данните.
 Пример:
 
-> <root>
->  <datasource name="HR-name">
->   <db-src>jdbc:oracle:thin:@GalacticAC:1521:xe</db-src>
->   <db-usr>HR</db-usr>
->   <db-psw>HR</db-psw>
->  </datasource>
->  <datasource name="...">
->   ...
->  </datasource>
-> </root>
+```
+ <root>
+  <datasource name="HR-name">
+   <db-src>jdbc:oracle:thin:@GalacticAC:1521:xe</db-src>
+   <db-usr>HR</db-usr>
+   <db-psw>HR</db-psw>
+  </datasource>
+  <datasource name="...">
+   ...
+  </datasource>
+ </root>
+```
 
 root - в него се съдържат отделните заявки бази.
 database - има атрибут name, който се изпозлва на укално и се използва за определяне на базата в подадената заявка за справка.
