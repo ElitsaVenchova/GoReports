@@ -123,3 +123,32 @@ database - има атрибут name, който се изпозлва на у�
   - report-code - code of report
   - report-type - type of generated result (pdf,excel и т.н.)
   - Param1=&...&ParamN= - report params, where Param1 is a name of param that is declared in document.xml docuname and this param will be initializе with paressed value and Param2 .... and so on.
+  
+ След прочитане на данните от декларираните sql заявки в document.xml се генерира следния примерен xml документ
+
+```
+ <root>
+  <params>
+   <db-src>jdbc:oracle:thin:@GalacticAC:1521:xe</db-src>
+   <db-usr>HR</db-usr>
+   <db-psw>HR</db-psw>
+  </params>
+  <row>
+   <employee>
+    <id>3</id>
+    <name>Rafi</name>
+    <age>29</age>
+   </employee>
+   <employee>
+   ...
+   </employee>
+   <department>
+    <id>13</id>
+    <name>HR</name>
+    <location>Paris</location>
+   </department>
+   ...
+  </row>
+ </root>
+```
+root - корена на генерирания докумнет
