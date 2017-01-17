@@ -39,8 +39,8 @@ Type of reports generated from GoReports:
 #### Пример:
 
 ><?xml version='1.0' encoding='windows-1251'?>
-><root>
-> <section description="Excel Reports">
+> <root>
+>  <section description="Excel Reports">
 >	  <type code="EMPLOYEE.SALARY.SIMPLE">
 >		  <description>Deployee salary</description>
 >		    <xslt output="fop">hr/employees_salary_simple.xsl</xslt>
@@ -59,8 +59,8 @@ Type of reports generated from GoReports:
 > <section description="...">
 > ....
 > </section>
-> ....
-></root>
+>  ....
+> </root>
 
 ##### section
 
@@ -93,23 +93,23 @@ Type of reports generated from GoReports:
 
   ##### param
   
-    чрез атрибута code се задава името на параметъра, което ще се използва за мапинг при получаване на заявката и също в sql заявките и xsl трансформацията.
+   чрез атрибута code се задава името на параметъра, което ще се използва за мапинг при получаване на заявката и също в sql заявките и xsl трансформацията.
     
 ##### src.xml
 
 В този файл се съдържат connection стринговите на отделните бази с паролите и имената, чрез които съответно при правене на една справка ще е извличат данните.
 Пример:
 
-><root>
-> <datasource name="HR-name">
+> <root>
+>  <datasource name="HR-name">
 >   <db-src>jdbc:oracle:thin:@GalacticAC:1521:xe</db-src>
 >   <db-usr>HR</db-usr>
 >   <db-psw>HR</db-psw>
-> </datasource>
-> <datasource name="...">
+>  </datasource>
+>  <datasource name="...">
 >   ...
-> </datasource>
-></root>
+>  </datasource>
+> </root>
 
 root - в него се съдържат отделните заявки бази.
 database - има атрибут name, който се изпозлва на укално и се използва за определяне на базата в подадената заявка за справка.
