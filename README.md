@@ -8,7 +8,7 @@ Type of reports generated from GoReports:
 - Excel
 - XML
 
-##Структура
+##Report Dir Structure
 Директория, която се съдържат справките на приложението:
 - dir
   - foconf
@@ -115,7 +115,7 @@ database - има атрибут name, който се изпозлва на у�
 #####Common
 
 Програмата приема заявки, който съдържат
-  - src - името на базата данни
-  - report-code - код на справката
-  - report-type - типа на генериранатас правка (pdf,excel и т.н.)
-  - Param1=&...&ParamN= - параметрите на справките, като Param1 е име на някой от параметрите декларирани в document.xml документа.
+  - src - name of database
+  - report-code - code of report
+  - report-type - type of generated result (pdf,excel и т.н.)
+  - Param1=&...&ParamN= - report params, where Param1 is a name of param that is declared in document.xml docuname and this param will be initializе with paressed value and Param2 .... and so on.
